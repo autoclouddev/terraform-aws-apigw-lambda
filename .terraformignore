@@ -1,0 +1,19 @@
+# VCS assets
+.git/
+.gitignore
+
+# IDE assets
+.editorconfig
+*.workspace
+
+# Standard text files
+LICENSE
+README*
+
+# Sensitive files
+sensitive.auto.tfvars
+.env
+.vault
+# Prevent anything not kms encrypted in sensitive folders from being committed (Terraform Cloud doesn't support git-crypt yet)
+**/sensitive/*
+!**/sensitive/*.kms
